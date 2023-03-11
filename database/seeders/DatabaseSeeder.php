@@ -1,7 +1,9 @@
 <?php
+use App\Models\Article;
+use Database\Factories\ArticleFactory;
+use Illuminate\Support\Facades\DB;
 
-namespace Database\Seeders;
-
+use Illuminate\Database\Eloquent\Factories\Factory;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,11 +14,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        
+        ArticleFactory::new()->count(25)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }
